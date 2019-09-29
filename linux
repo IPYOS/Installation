@@ -1,4 +1,5 @@
-echo "IPYOS installation Step 1:  Install docker on your linux first"
+echo "IPYOS installation Step 1:  Install docker on your linux first===============>"
+
 sudo apt-get update
 sudo apt install docker.io
 sudo systemctl start docker
@@ -7,7 +8,7 @@ sudo /lib/systemd/systemd-sysv-install enable docker
 docker --version
 
 
-echo "IPYOS installation Step 2:  Install alpine-python on your linux"
+echo "IPYOS installation Step 2:  Install alpine-python on your linux===============>"
 
 echo "-----------you will see the following output during the step 2 installation"
 ubuntu@ip-172-31-40-26:/ipyos/installation$ sudo docker build -t ipyos  .
@@ -295,3 +296,8 @@ Removing intermediate container 279265b1dc6a
  ---> fb19d9e1efe1
 Successfully built fb19d9e1efe1
 Successfully tagged ipyos:latest
+
+
+echo "IPYOS installation Step 3:  Try run a python command===============>"
+
+sudo docker run --rm -ti ipyos python --version
