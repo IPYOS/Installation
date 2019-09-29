@@ -10,7 +10,7 @@ docker --version
 
 echo "IPYOS installation Step 2:  Install alpine-python on your linux===============>"
 
-echo "-----------you will see the following output during the step 2 installation"
+echo "-----------you will see the following output during the step 2 installation, the following is not command!!!"
 ubuntu@ip-172-31-40-26:/ipyos/installation$ sudo docker build -t ipyos  .
 Sending build context to Docker daemon  6.656kB
 Step 1/6 : FROM alpine:3.8
