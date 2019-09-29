@@ -301,3 +301,5 @@ Successfully tagged ipyos:latest
 echo "IPYOS installation Step 3:  Try to run a python command===============>"
 
 sudo docker run --rm -ti ipyos python --version
+sudo docker run --rm -ti ipyos  bash
+
