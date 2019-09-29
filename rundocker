@@ -9,9 +9,10 @@ pip freeze > requirements.txt
 sudo docker build --rm=true -t flaskapp .
 
 ### create a container based on an image###
-sudo docker container create flaskapp
+sudo docker container create e67cdf81d042  --image id or image name
+sudo docker container ls -a  --list all container
 
-### cp a file from host to container ###
+### cp a file from host to running container ###
 sudo docker cp ./manage.py b388113e32fc:/manage.py
 
 ### run a container ###
@@ -20,3 +21,8 @@ sudo docker container start b388113e32fc
 ### inspect a running ccontainer or bash it ###
 sudo docker exec -it b388113e32fc /bin/bash
 sudo docker inspect b388113e32fc
+
+### embedded a file into a image###
+
+use COPY statement in Dockerfile
+
