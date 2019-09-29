@@ -1,0 +1,22 @@
+### append python dependencies to docker image ###
+goto folder: 3.7-onbuild
+cd ..
+sudo chown -R ubuntu:ubuntu 3.7-onbuild
+cd 3.7-onbuild
+pip freeze > requirements.txt
+
+### build a new docker image ###
+sudo docker build --rm=true -t flaskapp .
+
+### create a container based on an image###
+sudo docker container create flaskapp
+
+### cp a file from host to container ###
+sudo docker cp ./manage.py b388113e32fc:/manage.py
+
+### run a container ###
+sudo docker container start b388113e32fc
+
+### inspect a running ccontainer or bash it ###
+sudo docker exec -it b388113e32fc /bin/bash
+sudo docker inspect b388113e32fc
