@@ -26,3 +26,8 @@ sudo docker inspect b388113e32fc
 
 use COPY statement in Dockerfile
 
+### config the port to public port ###
+sudo docker run --rm=True  -p 8888:5000  e67cdf81d042 -- public port is 8888
+##test
+curl http://localhost:8888
+it will also work with the public IP:8888
