@@ -298,6 +298,6 @@ Successfully built fb19d9e1efe1
 Successfully tagged ipyos:latest
 
 
-echo "IPYOS installation Step 3:  Try run a python command===============>"
+echo "IPYOS installation Step 3:  Try to run a python command===============>"
 
 sudo docker run --rm -ti ipyos python --version
