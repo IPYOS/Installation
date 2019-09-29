@@ -1,0 +1,7 @@
+echo "IPYOS installation step 1:  Install docker on your linux first"
+sudo apt-get update
+sudo apt install docker.io
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo /lib/systemd/systemd-sysv-install enable docker
+docker --version
